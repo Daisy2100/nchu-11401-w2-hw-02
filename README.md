@@ -19,7 +19,7 @@
 ## 專案結構
 ```
 nchu-11401-w2-hw-02/
-├── dataset/
+├── datasets/
 │   └── house_prices.csv               # 原始資料集
 ├── 114056036_hw2.py                 # Python 主程式 (基礎版)
 ├── 114056036_hw2.ipynb              # Jupyter Notebook
