@@ -1,6 +1,5 @@
 # 忽略大檔案
-dataset/house_prices.csv
-datasets/
+datasets/*
 
 # Python 相關
 __pycache__/
