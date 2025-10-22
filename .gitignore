@@ -17,18 +17,18 @@ venv.bak/
 .ipynb_checkpoints/
 
 # 機器學習模型檔案 (已生成，無需上傳)
-*.pkl
-*.model
-*.h5
+# *.pkl
+# *.model
+# *.h5
 
 # 資料檔案 (超過 100MB)
 dataset/*.csv
 
 # 圖片檔案 (已生成的結果圖表)
-*.png
-*.jpg
-*.jpeg
-*.gif
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
 
 # 系統檔案
 .DS_Store

@@ -126,14 +126,20 @@ jupyter notebook 114056036_hw2.ipynb
 ## AI 協助說明
 
 ### GPT 輔助內容
-本專案在以下方面使用了 ChatGPT 的協助：
-- 資料預處理策略建議
-- 特徵工程方法指導
-- 模型評估指標選擇
-- 視覺化程式碼實作
+本專案在資料探索、程式架構、特徵工程、模型選擇、視覺化設計、錯誤排查（例如 GitHub 大檔案問題）等多個環節，使用了 GitHub Copilot（模型標示為 GPT-5 mini）協助。以下為整理後重點摘要，完整逐字對話請參閱專案檔案 `log.md`。
+
+- 資料來源與檢視：確認 Kaggle 原始資料集與欄位（約 21 個特徵、187,531 筆），並檢查缺失值與資料型態。
+- CRISP-DM 流程：依 Business Understanding → Data Understanding → Data Preparation → Modeling → Evaluation → Deployment 完成分析流程。
+- 資料清理：使用正規表示式抽取數值（如 "1200 sqft"、"2 BHK"），對類別欄位做熱門群組化（保留前 N 個地點，其他合成為 "Other"），並用 1%-99% 分位數或 IQR 處理極端值。
+- 特徵工程與選擇：建立衍生特徵（設施總數、面積比等），並使用 SelectKBest (f_regression) 與 RFE 做特徵選擇。
+- 建模策略：比較 Linear, Ridge, Lasso；嘗試對數轉換與正則化；使用標準化與交叉驗證評估模型穩定性。
+- 成果摘要：基礎線性回歸 R² ≈ 0.15，增強版（含更嚴格的預處理與 Lasso）測試 R² 提升至 ≈ 0.2025，預測區間覆蓋率約 94.8%。
+- 工程與版本控制：發現並解決 GitHub push 被拒的問題（csv 檔超過 100MB），更新 `.gitignore` 並移除該檔案於 commit 歷史後強制推送。
+
+> 補充：本段為對話重點整理；若需逐字稿或完整紀錄，請打開 `log.md`（專案根目錄）。
 
 ### NotebookLM 研究摘要
-[此處將加入 NotebookLM 對相關研究的摘要分析]
+專案同時準備了一份供 NotebookLM 上傳的研究摘要檔 `NotebookLM_summary.md`（位於專案根目錄），內含對網路上同題解法的整理與比較。
 
 ## 模型限制與改進建議
 
