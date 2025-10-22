@@ -1,1 +1,49 @@
-datasets
+# 忽略大檔案
+dataset/house_prices.csv
+datasets/
+
+# Python 相關
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# 機器學習模型檔案 (已生成，無需上傳)
+*.pkl
+*.model
+*.h5
+
+# 資料檔案 (超過 100MB)
+dataset/*.csv
+
+# 圖片檔案 (已生成的結果圖表)
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# 系統檔案
+.DS_Store
+Thumbs.db
+
+# IDE 設定
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 日誌檔案
+*.log
+
+# 暫存檔案
+*.tmp
+*.temp
